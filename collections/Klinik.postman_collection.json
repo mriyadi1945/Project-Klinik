@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "11b1fbdb-1054-405b-bb39-6c71f36ba59b",
+		"name": "Klinik",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26618831"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-username",
+						"value": "testing",
+						"type": "text"
+					},
+					{
+						"key": "x-password",
+						"value": "123456",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/auth",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status Antrean",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "{{x-token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-username",
+						"value": "testing",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/antrean/status/001/2023-04-27",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"antrean",
+						"status",
+						"001",
+						"2023-04-27"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "{{x-token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-username",
+						"value": "testing",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"namapoli\": \"Poli Kandungan\",\r\n    \"kodepoli\": \"001\",\r\n    \"tglpriksa\": \"2023-04-27\",\r\n    \"nomorkartu\": \"000000012\",\r\n    \"nik\": \"327502150498562\",\r\n    \"keluhan\": \"Sakit Dada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/create",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ambil Antrean",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "{{x-token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-username",
+						"value": "testing",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomorkartu\": \"000000001\",\r\n    \"nik\": \"327502150498599\",\r\n    \"kodepoli\": \"001\",\r\n    \"tanggalperiksa\": \"2023-04-26\",\r\n    \"keluhan\": \"Sakit Kepala\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/antrean",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"antrean"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sisa Antrean",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "{{x-token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-username",
+						"value": "testing",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{base_url}}/antrean/sisapeserta/000000002/001/2023-04-26",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"antrean",
+						"sisapeserta",
+						"000000002",
+						"001",
+						"2023-04-26"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Batal",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "{{x-token}}",
+						"type": "text"
+					},
+					{
+						"key": "x-username",
+						"value": "testing",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nomorkartu\": \"000000001\",\r\n    \"kodepoli\": \"001\",\r\n    \"tanggalperiksa\": \"2023-04-26\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/antrean/batal",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"antrean",
+						"batal"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
