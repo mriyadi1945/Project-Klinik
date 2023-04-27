@@ -16,7 +16,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\Antriansoal::factory()->create([
-        //     'nomorkartu' => 'testing',
+        //     'username' => 'testing',
         //     'password' => Hash::make('123456'),
         // ]);
     }
