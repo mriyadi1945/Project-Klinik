@@ -46,7 +46,7 @@ change
  
 To
  
-- \App\Models\Antriansoal::factory()->create([
+- \App\Models\User::factory()->create([
 - 'username' => 'testing',
 - 'password' => Hash::make('123456'),
 - ]);
