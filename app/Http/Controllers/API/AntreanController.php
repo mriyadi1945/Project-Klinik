@@ -126,7 +126,7 @@ class AntreanController extends BaseController
 
             $all = Antriansoal::all();
             $antrean = Antriansoal::where('statusdipanggil',0)->get();
-            if($data = Antriansoal::where('kodepoli',$request->kode_poli)->where('tglpriksa',$request->tanggalperiksa)->first()){
+            if($data = Antriansoal::where('kodepoli',$request->kode_poli)->where('statusdipanggil',0)->where('tglpriksa',$request->tanggalperiksa)->first()){
                 $response = array(
                     "namapoli" => $data->namapoli,
                     "totalantrean" => count($all),
@@ -181,6 +181,7 @@ class AntreanController extends BaseController
             ->where('kodepoli',$request->kodepoli)
             ->where('tglpriksa',$request->tanggalperiksa)
             ->where('keluhan',$request->keluhan)
+            ->where('statusdipanggil',0)
             ->first()){
                 $response = array(
                     "nomorantrean" => $data->nomorantrean,
