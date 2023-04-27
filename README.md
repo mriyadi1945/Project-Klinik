@@ -4,7 +4,7 @@
    - Backend RestApi (Contoh Sistem Antrean)
 
 ## Technology Stack
-   - Laravel 9
+   - Laravel 10.9.0
    - Postgre
    - JWT
 
