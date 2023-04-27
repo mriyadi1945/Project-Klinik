@@ -8,6 +8,14 @@
    - Postgre
    - JWT
 
+## EndPoint
+- auth
+- antrean/status/{kodepoli}/{tglpriksa}
+- create
+- antrean
+- antrean/sisapeserta/{kodekartu}/{kodepoli}/{tglpriksa}
+- antrean/batal
+
 ## Installation Guide
 
 - clone https://github.com/mriyadi1945/Project-Klinik.git
