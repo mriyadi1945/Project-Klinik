@@ -4,8 +4,8 @@
    - Backend RestApi (Contoh Sistem Antrean)
 
 ## Technology Stack
-   - Laravel 9
-   - Postgre
+   - Laravel 10.9.0
+   - Postgre 15.2
    - JWT
 
 ## EndPoint
@@ -46,7 +46,7 @@ change
  
 To
  
-- \App\Models\Antriansoal::factory()->create([
+- \App\Models\User::factory()->create([
 - 'username' => 'testing',
 - 'password' => Hash::make('123456'),
 - ]);
