@@ -51,8 +51,8 @@ run: php artisan db:seed
 - base_url : http://127.0.0.1:8000/api
 
 ## Question
-- WhatsApp: +62 817 4100 212
-- IG: @_riyadimoch
+- WhatsApp: https://wa.me/628174100212
+- IG: https://www.instagram.com/_riyadimoch/
 
 ## License
 
