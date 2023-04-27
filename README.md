@@ -5,7 +5,7 @@
 
 ## Technology Stack
    - Laravel 10.9.0
-   - Postgre
+   - Postgre 15.2
    - JWT
 
 ## EndPoint
