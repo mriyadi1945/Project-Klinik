@@ -29,6 +29,22 @@
 - run: php artisan jwt:secret
 - run: php artisan serve
 
+## Seeder (Create user)
+change
+- //\App\Models\Antriansoal::factory()->create([
+- //'username' => 'testing',
+- //'password' => Hash::make('123456'),
+- // ]);
+ 
+To
+ 
+- \App\Models\Antriansoal::factory()->create([
+- 'username' => 'testing',
+- 'password' => Hash::make('123456'),
+- ]);
+
+run: php artisan db:seed
+
 ## Work with postman
 - open directory collections
 - import file Klinik.postman_collection into postman
