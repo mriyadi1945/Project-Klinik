@@ -24,16 +24,22 @@ Route::group([
         if (Request::isMethod('get')) {
             //Auth
             Route::get('auth', [AuthController::class, 'getToken']);
+            Route::get('auth/read', [AuthController::class, 'read']);
             //Antrian
             Route::get('antrean/status/{kode_poli}/{tanggalperiksa}', [AntreanController::class, 'statusAntrean']);
             Route::get('antrean/sisapeserta/{nomorkartu_jkn}/{kode_poli}/{tanggalperiksa}', [AntreanController::class, 'sisaAntrean']);
         }
         if (Request::isMethod('post')) {
+            //Auth
+            Route::post('auth/create', [AuthController::class, 'create']);
+            Route::post('auth/update', [AuthController::class, 'update']);
             //Antrian
             Route::post('create', [AntreanController::class, 'create']);
             Route::post('antrean', [AntreanController::class, 'getAntrean']);
         }
         if (Request::isMethod('put')) {
+            //Auth
+            //Antrian
             Route::put('antrean/batal', [AntreanController::class, 'batal']);
         }
 });
