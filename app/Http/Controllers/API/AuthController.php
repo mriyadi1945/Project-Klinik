@@ -66,8 +66,8 @@ class AuthController extends BaseController
     {
         try {
             $rules = [
-                'x-username' => 'required',
-                'x-token' => 'required',
+                // 'x-username' => 'required',
+                // 'x-token' => 'required',
                 'username' => 'required',
                 'password' => 'required',
                 'nama' => 'required',
@@ -77,8 +77,8 @@ class AuthController extends BaseController
                 'kdcabang' => 'required',
             ];
             $validator = Validator::make([
-                'x-username'=>$request->header('x-username'),
-                'x-token'=>$request->header('x-token'),
+                // 'x-username'=>$request->header('x-username'),
+                // 'x-token'=>$request->header('x-token'),
                 'username'=>$request->username,
                 'password'=>$request->password,
                 'nama'=>$request->nama,
@@ -91,7 +91,7 @@ class AuthController extends BaseController
             if($validator->fails()){
                 return $this->response->sendError($validator->errors()->first(), '', 201);
             }
-            $userTest = JWTAuth::setToken($request->header('x-token'))->toUser();
+            // $userTest = JWTAuth::setToken($request->header('x-token'))->toUser();
 
             $user = User::create([
                 'name' => $request->nama,
