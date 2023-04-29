@@ -172,11 +172,11 @@ class AuthController extends BaseController
     {
         try {
             $rules = [
-                'x-username' => 'required',
+                // 'x-username' => 'required',
                 'x-token' => 'required',
             ];
             $validator = Validator::make([
-                'x-username'=>$request->header('x-username'),
+                // 'x-username'=>$request->header('x-username'),
                 'x-token'=>$request->header('x-token'),
             ], $rules);
 
